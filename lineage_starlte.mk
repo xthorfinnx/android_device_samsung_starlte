@@ -12,7 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 $(call inherit-product, device/samsung/starlte/device.mk)
 
 # Inherit some common Lineage stuff
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# AxionOS
+AXION_CAMERA_REAR_INFO := 12
+AXION_CAMERA_FRONT_INFO := 8
+AXION_MAINTAINER := Thorfinn
+AXION_PROCESSOR := Exynos_9810
 
 # Device identifier, this must come after all inclusions
 PRODUCT_NAME := lineage_starlte
